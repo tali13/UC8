@@ -9,5 +9,6 @@ package com.mycompany.interfaces;
  * @author TALITANAIBERTDACOSTA
  */
 public interface instrumento {
-    
+    void tocar();
+    void afinar();
 }

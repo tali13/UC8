@@ -8,6 +8,17 @@ package com.mycompany.interfaces;
  *
  * @author TALITANAIBERTDACOSTA
  */
-public class bateria {
+public class bateria implements instrumento{
+
+    private String marca;
+
+    @Override
+    public void tocar() {
+        System.out.println("a marca da bateria e " + this.marca + ".");
+    }
+
+    @Override
+    public void afinar() {
+    }
     
 }

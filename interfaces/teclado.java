@@ -8,6 +8,17 @@ package com.mycompany.interfaces;
  *
  * @author TALITANAIBERTDACOSTA
  */
-public class teclado {
+public class teclado  implements instrumento{
+
+    private String marca;
+
+    @Override
+    public void tocar() {
+        System.out.println("a marca do seu teclado e " + this.marca + ".");
+    }
+
+    @Override
+    public void afinar() {
+    }
     
 }

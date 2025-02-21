@@ -8,6 +8,18 @@ package com.mycompany.interfaces;
  *
  * @author TALITANAIBERTDACOSTA
  */
-public class violao {
+public class violao implements instrumento{
+    
+    private String marca ="tagima";
+
+    @Override
+    public void tocar() {
+        System.out.println("a marca do violão e " + this.marca + ".");
+    }
+
+    @Override
+    public void afinar() {
+        
+    }
     
 }

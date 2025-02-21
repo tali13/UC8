@@ -11,6 +11,11 @@ package com.mycompany.interfaces;
 public class INTERFACES {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+        
+    violao meuViolao = new violao();
+   bateria minhaBateria = new bateria();
+            teclado meuTeclado  = new teclado();
+            
+            
+   }
 }
