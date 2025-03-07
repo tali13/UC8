@@ -45,10 +45,10 @@ public class telaLogin extends javax.swing.JFrame {
         campoNome2 = new javax.swing.JTextField();
         Nome = new javax.swing.JLabel();
         Senha = new javax.swing.JLabel();
-        campoSenha = new javax.swing.JTextField();
         Email = new javax.swing.JLabel();
         registras = new javax.swing.JButton();
         entrar = new javax.swing.JButton();
+        campoSenha = new javax.swing.JPasswordField();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -80,6 +80,7 @@ public class telaLogin extends javax.swing.JFrame {
         painel.setBackground(new java.awt.Color(0, 0, 0));
         painel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 51)));
         painel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        painel.setDoubleBuffered(false);
 
         jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 2, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 255, 0));
@@ -129,21 +130,6 @@ public class telaLogin extends javax.swing.JFrame {
         Senha.setForeground(new java.awt.Color(51, 255, 51));
         Senha.setText("Senha");
 
-        campoSenha.setBackground(new java.awt.Color(0, 0, 0));
-        campoSenha.setForeground(new java.awt.Color(51, 255, 0));
-        campoSenha.setText("insira sua senha...");
-        campoSenha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0)));
-        campoSenha.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                campoSenhaFocusGained(evt);
-            }
-        });
-        campoSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoSenhaActionPerformed(evt);
-            }
-        });
-
         Email.setForeground(new java.awt.Color(0, 255, 51));
         Email.setText("Email");
 
@@ -167,6 +153,15 @@ public class telaLogin extends javax.swing.JFrame {
             }
         });
 
+        campoSenha.setBackground(new java.awt.Color(0, 0, 0));
+        campoSenha.setText("jPasswordField1");
+        campoSenha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 0)));
+        campoSenha.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoSenhaFocusGained(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelLayout = new javax.swing.GroupLayout(painel);
         painel.setLayout(painelLayout);
         painelLayout.setHorizontalGroup(
@@ -181,11 +176,11 @@ public class telaLogin extends javax.swing.JFrame {
                     .addComponent(Email, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelLayout.createSequentialGroup()
                         .addComponent(registras, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
                         .addComponent(entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(campoSenha)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(campoSenha))
+                .addContainerGap(484, Short.MAX_VALUE))
         );
         painelLayout.setVerticalGroup(
             painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,20 +197,23 @@ public class telaLogin extends javax.swing.JFrame {
                 .addComponent(campoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Senha, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(91, 91, 91)
                 .addGroup(painelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(registras, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(painel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,10 +230,6 @@ public class telaLogin extends javax.swing.JFrame {
     private void campoNome2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNome2ActionPerformed
              
     }//GEN-LAST:event_campoNome2ActionPerformed
-
-    private void campoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSenhaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoSenhaActionPerformed
 
     private void registrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrasActionPerformed
         // TODO add your handling code here:
@@ -270,9 +264,7 @@ if("insira seu nome...".equals(campoNome2.getText())){
     }//GEN-LAST:event_campoEmailFocusLost
 
     private void campoSenhaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoSenhaFocusGained
-   if(new String(campoSenha.getPassword()).equals("3654518")){
-       campoSenha.setText("");
-   }
+
     }//GEN-LAST:event_campoSenhaFocusGained
 
     /**
@@ -316,7 +308,7 @@ if("insira seu nome...".equals(campoNome2.getText())){
     private javax.swing.JLabel Senha;
     private javax.swing.JTextField campoEmail;
     private javax.swing.JTextField campoNome2;
-    private javax.swing.JTextField campoSenha;
+    private javax.swing.JPasswordField campoSenha;
     private javax.swing.JButton entrar;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
