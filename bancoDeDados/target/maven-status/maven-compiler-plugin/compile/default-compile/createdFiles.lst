@@ -1,0 +1,3 @@
+com\mycompany\bancodedados\BancoDeDados.class
+com\mycompany\bancodedados\CriarTabela.class
+com\mycompany\bancodedados\ConexaoSQLite.class
